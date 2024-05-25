@@ -4,10 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.agungaditia.latihanandroid.barVolume.BarVolumeActivity
+import androidx.fragment.app.FragmentActivity
+import com.agungaditia.latihanandroid.activity.BarVolumeActivity
 import com.agungaditia.latihanandroid.databinding.ActivityMainBinding
+import com.agungaditia.latihanandroid.fragment.HomeActivity
+import com.agungaditia.latihanandroid.intent.MyIntentActivity
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -16,15 +19,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnActivity.setOnClickListener(this)
-    }
+        binding.btnActivity.setOnClickListener {
+            val intent = Intent(this, BarVolumeActivity::class.java)
+            startActivity(intent)
+        }
 
-    override fun onClick(view: View?) {
-        when (view?.id) {
-            R.id.btn_activity -> {
-                val intent = Intent(this@MainActivity, BarVolumeActivity::class.java)
-                startActivity(intent)
-            }
+        binding.btnIntent.setOnClickListener {
+            val intent = Intent(this, MyIntentActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnFragment.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
     }
+
 }
