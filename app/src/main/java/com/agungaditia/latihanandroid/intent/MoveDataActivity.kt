@@ -10,8 +10,9 @@ import com.agungaditia.latihanandroid.databinding.ActivityMoveDataBinding
 
 class MoveDataActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMoveDataBinding
+    private lateinit var binding: ActivityMoveDataBinding // Variable  view binding
 
+    // Key untuk menerima data dari activity sebelumnya
     companion object {
         const val EXTRA_NAME = "extra_name"
         const val EXTRA_AGE = "extra_age"
@@ -19,13 +20,14 @@ class MoveDataActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Inisialisasi view binding
         binding = ActivityMoveDataBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding.root) // Menampilkan layout dengan view binding
 
-        val name = intent.getStringExtra(EXTRA_NAME)
-        val age = intent.getIntExtra(EXTRA_AGE, 0)
+        val name = intent.getStringExtra(EXTRA_NAME) // Mendapatkan data dari intent dengan key EXTRA_NAME
+        val age = intent.getIntExtra(EXTRA_AGE, 0) // Mendapatkan data dari intent dengan key EXTRA_AGE
 
-        val text = "Name : $name, Your Age : $age"
-        binding.dataReceived.text = text
+        val text = "Name : $name, Your Age : $age" // Menampilkan teks dengan data yang diterima
+        binding.dataReceived.text = text // Menampilkan teks pada TextView dataReceived
     }
 }

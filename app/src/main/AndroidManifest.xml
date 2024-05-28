@@ -13,6 +13,9 @@
         android:theme="@style/Theme.LatihanAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".intent.MoveWithObjectActivity"
+            android:exported="false" />
+        <activity
             android:name=".intent.MoveDataActivity"
             android:exported="false" />
         <activity
