@@ -8,14 +8,16 @@ import androidx.core.view.WindowInsetsCompat
 import com.agungaditia.latihanandroid.R
 
 class HomeActivity : AppCompatActivity() {
+
+    private val dataString : String = "Helo ini adalah data string"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_home)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        val transaction = supportFragmentManager.beginTransaction()
+        val firstFragment = FirstFragment()
+
+        transaction.replace(R.id.frame_container, firstFragment)
+        transaction.commit()
     }
 }

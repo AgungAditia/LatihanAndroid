@@ -26,4 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/move_with_object"/>
+
+    <Button
+        android:id="@+id/btn_latihan_object"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Latihan Pindah dengan Object "/>
 </LinearLayout>

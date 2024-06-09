@@ -10,19 +10,33 @@
 
     <Button
         android:id="@+id/btn_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/ButtonGeneral.SecondaryVariant"
         android:text="@string/btn_activity" />
 
     <Button
         android:id="@+id/btn_intent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/ButtonGeneral.SecondaryVariant"
         android:text="@string/btn_intent" />
 
     <Button
+        android:id="@+id/btn_view"
+        style="@style/ButtonGeneral.SecondaryVariant"
+        android:text="@string/btn_view" />
+
+    <Button
+        android:id="@+id/btn_constraint"
+        style="@style/ButtonGeneral.SecondaryVariant"
+        android:text="@string/btn_constraint_view" />
+
+    <Button
         android:id="@+id/btn_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/ButtonGeneral.SecondaryVariant"
         android:text="@string/btn_fragment" />
+
+    <Button
+        android:id="@+id/btn_recylerview"
+        style="@style/ButtonGeneral.SecondaryVariant"
+        android:text="@string/recylerview" />
+
+
 </LinearLayout>

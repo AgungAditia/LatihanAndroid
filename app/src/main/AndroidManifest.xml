@@ -13,6 +13,21 @@
         android:theme="@style/Theme.LatihanAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewgroup.ConstrainViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewgroup.ConstrainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewgroup.ViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.LatihanObjectActivity"
+            android:exported="false" />
+        <activity
             android:name=".intent.MoveWithObjectActivity"
             android:exported="false" />
         <activity

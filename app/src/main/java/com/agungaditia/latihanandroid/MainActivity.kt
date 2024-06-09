@@ -9,6 +9,9 @@ import com.agungaditia.latihanandroid.activity.BarVolumeActivity
 import com.agungaditia.latihanandroid.databinding.ActivityMainBinding
 import com.agungaditia.latihanandroid.fragment.HomeActivity
 import com.agungaditia.latihanandroid.intent.MyIntentActivity
+import com.agungaditia.latihanandroid.recyclerview.RecyclerViewActivity
+import com.agungaditia.latihanandroid.viewgroup.ConstrainViewActivity
+import com.agungaditia.latihanandroid.viewgroup.ViewActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +40,21 @@ class MainActivity : AppCompatActivity() {
             // Intent digunakan untuk berpindah halaman
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent) // -> Untuk menjalankan halaman
+        }
+
+        binding.btnView.setOnClickListener {
+            val intent = Intent(this, ViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnConstraint.setOnClickListener {
+            val intent = Intent(this, ConstrainViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnRecylerview.setOnClickListener {
+            val intent = Intent(this, RecyclerViewActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -24,6 +24,7 @@ class MyIntentActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnMove.setOnClickListener(this)
         binding.btnMoveData.setOnClickListener(this)
         binding.btnMoveObject.setOnClickListener(this)
+        binding.btnLatihanObject.setOnClickListener(this)
     }
 
     // Fungsi onClick
@@ -54,6 +55,14 @@ class MyIntentActivity : AppCompatActivity(), View.OnClickListener {
                 moveObjectIntent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, person)
                 startActivity(moveObjectIntent)
 
+            }
+
+            R.id.btn_latihan_object -> {
+                val person = Person("Agung Aditia", 21, "habsyah10@gmail.com", "Depok")
+                val moveObjectIntent =
+                    Intent(this@MyIntentActivity, LatihanObjectActivity::class.java)
+                moveObjectIntent.putExtra(LatihanObjectActivity.EXTRA_NAME, person)
+                startActivity(moveObjectIntent)
             }
         }
     }
