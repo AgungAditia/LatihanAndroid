@@ -2,12 +2,11 @@ package com.agungaditia.latihanandroid
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentActivity
 import com.agungaditia.latihanandroid.activity.BarVolumeActivity
 import com.agungaditia.latihanandroid.databinding.ActivityMainBinding
-import com.agungaditia.latihanandroid.fragment.HomeActivity
+import com.agungaditia.latihanandroid.fragment.FragmentActivity
+import com.agungaditia.latihanandroid.fragment.HomeFragment
 import com.agungaditia.latihanandroid.intent.MyIntentActivity
 import com.agungaditia.latihanandroid.recyclerview.RecyclerViewActivity
 import com.agungaditia.latihanandroid.viewgroup.ConstrainViewActivity
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnFragment.setOnClickListener {
             // Intent digunakan untuk berpindah halaman
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, FragmentActivity::class.java)
             startActivity(intent) // -> Untuk menjalankan halaman
         }
 
