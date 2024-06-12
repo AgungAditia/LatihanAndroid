@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.agungaditia.latihanandroid.activity.BarVolumeActivity
+import com.agungaditia.latihanandroid.api.ui.RestaurantActivity
 import com.agungaditia.latihanandroid.databinding.ActivityMainBinding
 import com.agungaditia.latihanandroid.fragment.FragmentActivity
 import com.agungaditia.latihanandroid.fragment.HomeFragment
@@ -12,6 +13,7 @@ import com.agungaditia.latihanandroid.navigation.NavActivity
 import com.agungaditia.latihanandroid.recyclerview.RecyclerViewActivity
 import com.agungaditia.latihanandroid.viewgroup.ConstrainViewActivity
 import com.agungaditia.latihanandroid.viewgroup.ViewActivity
+import com.agungaditia.latihanandroid.viewmodel.ViewModelActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,6 +60,15 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnNavigation.setOnClickListener {
             val intent = Intent(this, NavActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnApi.setOnClickListener {
+            val intent = Intent(this, RestaurantActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnViewModel.setOnClickListener {
+            val intent = Intent(this, ViewModelActivity::class.java)
             startActivity(intent)
         }
     }

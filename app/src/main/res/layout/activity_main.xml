@@ -43,5 +43,15 @@
         style="@style/ButtonGeneral.SecondaryVariant"
         android:text="Navigation" />
 
+    <Button
+        android:id="@+id/btn_api"
+        style="@style/ButtonGeneral.SecondaryVariant"
+        android:text="REST API"/>
+
+    <Button
+        android:id="@+id/btn_viewModel"
+        style="@style/ButtonGeneral.SecondaryVariant"
+        android:text="View Model" />
+
 
 </LinearLayout>
