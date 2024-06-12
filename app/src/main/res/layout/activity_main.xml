@@ -38,5 +38,10 @@
         style="@style/ButtonGeneral.SecondaryVariant"
         android:text="@string/recylerview" />
 
+    <Button
+        android:id="@+id/btn_navigation"
+        style="@style/ButtonGeneral.SecondaryVariant"
+        android:text="Navigation" />
+
 
 </LinearLayout>

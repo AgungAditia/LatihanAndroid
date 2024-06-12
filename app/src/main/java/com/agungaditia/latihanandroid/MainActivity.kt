@@ -8,6 +8,7 @@ import com.agungaditia.latihanandroid.databinding.ActivityMainBinding
 import com.agungaditia.latihanandroid.fragment.FragmentActivity
 import com.agungaditia.latihanandroid.fragment.HomeFragment
 import com.agungaditia.latihanandroid.intent.MyIntentActivity
+import com.agungaditia.latihanandroid.navigation.NavActivity
 import com.agungaditia.latihanandroid.recyclerview.RecyclerViewActivity
 import com.agungaditia.latihanandroid.viewgroup.ConstrainViewActivity
 import com.agungaditia.latihanandroid.viewgroup.ViewActivity
@@ -53,6 +54,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnRecylerview.setOnClickListener {
             val intent = Intent(this, RecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnNavigation.setOnClickListener {
+            val intent = Intent(this, NavActivity::class.java)
             startActivity(intent)
         }
     }

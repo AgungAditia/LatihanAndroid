@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeNavFragment">
+    <fragment
+        android:id="@+id/homeNavFragment"
+        android:name="com.agungaditia.latihanandroid.navigation.HomeNavFragment"
+        android:label="fragment_home_nav"
+        tools:layout="@layout/fragment_home_nav" >
+        <action
+            android:id="@+id/action_homeNavFragment_to_categoryNavFragment"
+            app:destination="@id/categoryNavFragment" />
+        <action
+            android:id="@+id/action_homeNavFragment_to_profileNavActivity"
+            app:destination="@id/profileNavActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryNavFragment"
+        android:name="com.agungaditia.latihanandroid.navigation.CategoryNavFragment"
+        android:label="fragment_category_nav"
+        tools:layout="@layout/fragment_category_nav" >
+        <action
+            android:id="@+id/action_categoryNavFragment_to_detailCategoryNavFragment"
+            app:destination="@id/detailCategoryNavFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/profileNavActivity"
+        android:name="com.agungaditia.latihanandroid.navigation.ProfileNavActivity"
+        android:label="activity_profile_nav"
+        tools:layout="@layout/activity_profile_nav" />
+    <fragment
+        android:id="@+id/detailCategoryNavFragment"
+        android:name="com.agungaditia.latihanandroid.navigation.DetailCategoryNavFragment"
+        android:label="fragment_detail_category_nav"
+        tools:layout="@layout/fragment_detail_category_nav" />
+</navigation>
