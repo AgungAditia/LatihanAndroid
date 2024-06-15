@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".livedata.MyLiveActivity"
+            android:exported="false" />
+        <activity
             android:name=".viewmodel.ViewModelActivity"
             android:exported="false" />
         <activity

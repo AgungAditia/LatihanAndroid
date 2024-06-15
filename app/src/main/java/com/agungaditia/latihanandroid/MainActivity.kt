@@ -9,6 +9,7 @@ import com.agungaditia.latihanandroid.databinding.ActivityMainBinding
 import com.agungaditia.latihanandroid.fragment.FragmentActivity
 import com.agungaditia.latihanandroid.fragment.HomeFragment
 import com.agungaditia.latihanandroid.intent.MyIntentActivity
+import com.agungaditia.latihanandroid.livedata.MyLiveActivity
 import com.agungaditia.latihanandroid.navigation.NavActivity
 import com.agungaditia.latihanandroid.recyclerview.RecyclerViewActivity
 import com.agungaditia.latihanandroid.viewgroup.ConstrainViewActivity
@@ -69,6 +70,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnViewModel.setOnClickListener {
             val intent = Intent(this, ViewModelActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnLiveData.setOnClickListener {
+            val intent = Intent(this, MyLiveActivity::class.java)
             startActivity(intent)
         }
     }
