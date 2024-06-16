@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -26,6 +27,8 @@ import retrofit2.Response
 class RestaurantActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRestaurantBinding
+    private val restaurantViewModel by viewModels<RestaurantViewModel>()
+
 
     companion object {
         private const val TAG = "RestaurantActivity"
@@ -39,10 +42,11 @@ class RestaurantActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        val restaurantViewModel = ViewModelProvider(
-            this,
-            ViewModelProvider.NewInstanceFactory()
-        )[RestaurantViewModel::class.java]
+//        val restaurantViewModel = ViewModelProvider(
+//            this,
+//            ViewModelProvider.NewInstanceFactory()
+//        )[RestaurantViewModel::class.java]
+
         restaurantViewModel.restaurant.observe(this) { restaurant ->
             setRestaurantData(restaurant)
         }

@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.commit
 import com.agungaditia.latihanandroid.R
 
 class FragmentActivity : AppCompatActivity() {
@@ -17,12 +18,20 @@ class FragmentActivity : AppCompatActivity() {
         val homeFragment = HomeFragment()
         val fragment = fragmentManager.findFragmentByTag(HomeFragment::class.java.simpleName)
 
+//        if (fragment !is HomeFragment) {
+//            Log.d("FragmentActivity", "Fragment Name :" + HomeFragment::class.java.simpleName)
+//            fragmentManager
+//                .beginTransaction()
+//                .add(R.id.frame_container, homeFragment, HomeFragment::class.java.simpleName)
+//                .commit()
+//        }
+
+        // Dengan Fragment KTX
         if (fragment !is HomeFragment) {
-            Log.d("FragmentActity", "Fragment Name :" + HomeFragment::class.java.simpleName)
-            fragmentManager
-                .beginTransaction()
-                .add(R.id.frame_container, homeFragment, HomeFragment::class.java.simpleName)
-                .commit()
+            Log.d("Fragment Activity", "Fragment Name :" + HomeFragment::class.java.simpleName)
+            fragmentManager.commit {
+                add(R.id.frame_container, homeFragment, HomeFragment::class.java.simpleName)
+            }
         }
     }
 }

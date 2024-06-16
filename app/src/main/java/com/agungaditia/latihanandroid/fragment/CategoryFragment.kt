@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.commit
 import com.agungaditia.latihanandroid.R
 import com.agungaditia.latihanandroid.databinding.FragmentCategoryBinding
 
@@ -40,14 +41,24 @@ class CategoryFragment : Fragment(), View.OnClickListener {
             detailCategoryFragment.description = description
 
             val fragmentManager = parentFragmentManager
-            fragmentManager.beginTransaction().apply {
+//            fragmentManager.beginTransaction().apply {
+//                replace(
+//                    R.id.frame_container,
+//                    detailCategoryFragment,
+//                    DetailCategoryFragment::class.java.simpleName
+//                )
+//                addToBackStack(null)
+//                commit()
+//            }
+
+            // Dengan inline function / lambda Fragment KTX
+            fragmentManager.commit {
+                addToBackStack(null)
                 replace(
                     R.id.frame_container,
                     detailCategoryFragment,
                     DetailCategoryFragment::class.java.simpleName
                 )
-                addToBackStack(null)
-                commit()
             }
         }
     }

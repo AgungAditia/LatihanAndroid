@@ -111,4 +111,10 @@
 
     <string name="seconds">%d seconds elapsed</string>
     <string name="hello_dicoding">Hello Dicoding!</string>
+
+
+    <string name="calculate_volume">Hitung Volume</string>
+    <string name="calculate_surface_area">Hitung Luas Area</string>
+    <string name="calculate_circumference">Hitung Keliling</string>
+    <string name="save">Simpan</string>
 </resources>

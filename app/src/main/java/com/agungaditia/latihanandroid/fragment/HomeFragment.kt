@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.commit
 import com.agungaditia.latihanandroid.R
 import com.agungaditia.latihanandroid.databinding.FragmentHomeBinding
 
@@ -32,14 +33,24 @@ class HomeFragment : Fragment(), View.OnClickListener {
         if (view?.id == R.id.btn_category) {
             val categoryFragment = CategoryFragment()
             val fragmentManager = parentFragmentManager
-            fragmentManager.beginTransaction().apply {
+//            fragmentManager.beginTransaction().apply {
+//                replace(
+//                    R.id.frame_container,
+//                    categoryFragment,
+//                    CategoryFragment::class.java.simpleName
+//                )
+//                addToBackStack(null)
+//                commit()
+//            }
+
+            // Dengan menggunakan FragmentTransaction / Fragment KTX
+            fragmentManager.commit {
+                addToBackStack(null)
                 replace(
                     R.id.frame_container,
                     categoryFragment,
                     CategoryFragment::class.java.simpleName
                 )
-                addToBackStack(null)
-                commit()
             }
         }
     }
