@@ -16,6 +16,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".room.ui.NoteAddUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".room.MyNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".readwritefile.MyReadWriteActivity"
+            android:exported="false" />
+        <activity
             android:name=".unittest.MyUnitTestActivity"
             android:exported="false" />
         <activity

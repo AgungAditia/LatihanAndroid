@@ -11,7 +11,9 @@ import com.agungaditia.latihanandroid.fragment.HomeFragment
 import com.agungaditia.latihanandroid.intent.MyIntentActivity
 import com.agungaditia.latihanandroid.livedata.MyLiveActivity
 import com.agungaditia.latihanandroid.navigation.NavActivity
+import com.agungaditia.latihanandroid.readwritefile.MyReadWriteActivity
 import com.agungaditia.latihanandroid.recyclerview.RecyclerViewActivity
+import com.agungaditia.latihanandroid.room.MyNoteActivity
 import com.agungaditia.latihanandroid.viewgroup.ConstrainViewActivity
 import com.agungaditia.latihanandroid.viewgroup.ViewActivity
 import com.agungaditia.latihanandroid.viewmodel.ViewModelActivity
@@ -74,6 +76,16 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnLiveData.setOnClickListener {
             val intent = Intent(this, MyLiveActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnReadWrite.setOnClickListener {
+            val intent = Intent(this, MyReadWriteActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnRoom.setOnClickListener {
+            val intent = Intent(this, MyNoteActivity::class.java)
             startActivity(intent)
         }
     }

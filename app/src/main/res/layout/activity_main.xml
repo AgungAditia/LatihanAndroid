@@ -63,6 +63,15 @@
             style="@style/ButtonGeneral.SecondaryVariant"
             android:text="Live Data" />
 
+        <Button
+            android:id="@+id/btn_read_write"
+            style="@style/ButtonGeneral.SecondaryVariant"
+            android:text="Read Write File" />
+
+        <Button
+            android:id="@+id/btn_room"
+            style="@style/ButtonGeneral.SecondaryVariant"
+            android:text="Room" />
 
     </LinearLayout>
 </ScrollView>

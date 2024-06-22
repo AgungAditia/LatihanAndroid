@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-parcelize") // Add plugin for parcelize
     id("androidx.navigation.safeargs")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -74,5 +75,13 @@ dependencies {
     // Activity KTX and Fragment KTX
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
+
+    // Preference DataStore
+    implementation(libs.androidx.datastore.preferences)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
 }
